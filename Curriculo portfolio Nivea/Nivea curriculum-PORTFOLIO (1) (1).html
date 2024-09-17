@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Portfolio - Nivea</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #122231;
+            color: #fff;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #98a2ac;
+            color: #3996d4;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #020607; 
+            z-index: 1000;
+            padding: 10px 20px;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            color: #ffffff; 
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #2b7cb6; 
+        }
+
+        .header {
+            text-align: right;
+            padding: 50px 0;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            text-align: right;
+            color: #00abf0;
+        }
+
+        .header h2 {
+            color: #00e0ff;
+            font-size: 24px;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #000; 
+            border-bottom: 5px solid #1a1f22;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        section p, section ul, section table {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+
+        .profile-section .profile-image {
+            width: 40%;
+            text-align: center;
+        }
+
+        .profile-section .profile-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #00e0ff;
+        }
+
+        .profile-section .profile-content {
+            width: 55%;
+        }
+
+        .profile-section .profile-content h3 {
+            font-size: 32px;
+            color: #00e0ff;
+        }
+
+        .profile-section .profile-content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .profile-section .profile-content .download-btn {
+            display: inline-block;
+            background-color: #00e0ff;
+            color: #000;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .FUNDO {
+            background-color: #ffffffc7;
+            padding: 50px 20px;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.6em;
+            
+    
+        }
+
+        .FUNDO{
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+         .Curriculum {
+            background-color: #ffffffc7;
+            padding: 50px 50px;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.6em;
+         }
+
+         .Curriculum{
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+    
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        table th, table td {
+            padding: 12px;
+            border: 4px solid #203030;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #16a0a0;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #16a0a0;
+        }
+
+        .back {
+
+            background-color: #122231;
+        }
+        .projects-section {
+            background-color: #1a1f22;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .projects-section h2 {
+            font-size: 36px;
+            color: #00e0ff;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .project {
+            width: 24%;
+            background-color: #16a0a0;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 224, 255, 0.2);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 50px;
+        }
+
+         .projecto {
+            background-color: #000000;
+            padding: 50px 20px;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.6em;
+            
+        }
+         .projecto {
+        font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+         }
+
+
+        .contact-section form {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .contact-section form input, .contact-section form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: #1c2025;
+            color: #fff;
+        }
+
+        .contact-section form button {
+            background-color: #00e0ff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: none;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .project-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1px;
+        }
+
+        .card {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            background-color:#000; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.3 )
+
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 100px;
+        }
+
+        main {
+    margin-top: 60px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+.card-container {
+    display: flex;
+    gap: 20px; 
+}
+
+
+.card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    color: #00abf0;
+}
+
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-image:hover {
+    top: 0;
+
+}
+
+
+.card-content {
+    padding: 16px;
+    color: #00abf0;
+}
+
+
+.card-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+
+.card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+
+.card:hover {
+    background-color: #e0f7fa; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+           /* Footer */
+           footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+     
+      
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Sobre Mim">Sobre Mim</a></li> 
+                <li><a href="#Curriculum">Curriculum</a></li> 
+                <li><a href="#Projetos Realizados">Projectos</a></li>
+                <li><a href="#Meus Serviços">Meus Serviços</a></li>
+                <li><a href="#Contactos">Contactos </a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Inicio">
+    <div class="container">
+
+        <div class="header">
+            <h1>Nivea Fernanda</h1>  
+            <p></p>
+            <h3>Tecnica de suporte informático</h3>
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="img/5a9babef-ca2f-408f-ba72-942473c1c26c.jpg" alt="Nivea">
+            </div>
+            <div class="profile-content">
+                <h3>Bem vindo!</h3>
+                <p>Sou Nivea Fernanda, Estudante de Informática no Instituto de Transportes e Comunicações. <br>
+                    Onde estou moldando minha paixão por tecnologia e inovação. <br>
+                    Meu percurso acadêmico é pautado pela busca constante de conhecimento e pelo desenvolvimento de habilidades que conectam o mundo digital com o futuro. <br></p> 
+                
+                    <a href="cv.docx" class="download-btn">Download CV</a>
+
+            </div>
+        </div>
+
+        <p></p>
+        
+        
+        <section id="Sobre Mim" class="FUNDO">
+            <h2>Sobre Mim</h2>
+            <p>Olá! <br>
+                Sou estudante no Instituto de Transportes e Comunicações, onde estou atualmente no segundo ano do curso de Informática. <br>
+                 Minha paixão por tecnologia e informática é o que me motiva a seguir em frente com muito entusiasmo e dedicação. <br>
+                 Além das aulas e dos desafios acadêmicos, também trabalho na área de som e luz para eventos, como festas e outros eventos especiais. <br>
+                 Esse trabalho me permite aplicar e expandir meus conhecimentos em um contexto prático, e é uma parte fundamental da minha vida <br>
+                 Que complementa a minha formação e me dá uma perspectiva valiosa sobre o uso da tecnologia em diferentes cenários.</p>
+        </section>
+
+
+    </section>
+        <section id="Curriculum" class="Curriculum"> 
+            <h2>Curriculum vitae</h2>
+
+            <h3>Informações Pessoais</h3>
+            <p><li>Nome: Nivea Fernanda Carrilho</li></p>
+            <p><li>Data de Nascimento: 04/06/2007</li></p>
+            <p><li>Nacionalidade: Moçambicana</li></p>
+            <p><li>Sexo: feminino</li></p>
+            <p><li>Estado civil: Solteiro</li></p>
+            <p><li>B.I:110502792054C</li></p>
+        
+            <h3>Formação Acadêmica</h3>
+            <p><li>2022- Conclui a 10 classe na escola são vicente de Paulo da malhangalene;</li></p>
+            <p><li>2023 - conclui o CV3 de técnico medio em eletricidade industrial no ITC;</li></p>
+            <p><li>2024 – Frequento o CV4 de técnico medio em suporte informático no ITC;</li></p>
+            
+            <h3>Habilidades Linguísticas</h3>
+            <table>
+                <tr>
+                    <th>Língua</th>
+                    <th>Fala</th>
+                    <th>Escrita</th>
+                </tr>
+                <tr>
+                    <td>Português</td>
+                    <td>Excelente</td>
+                    <td>Excelente</td>
+                </tr>
+                <tr>
+                    <td>Inglês</td>
+                    <td>Razoável</td>
+                    <td>Razoável</td>
+                </tr>
+                <tr>
+                    <td>Changana</td>
+                    <td>Razoável</td>
+                    <td>Razoável</td>
+                </tr>
+            </table>
+
+                <h3>Atributos</h3>
+                <p><li>Facilidade de comunicação e relacionamento interpessoal;</li></p>
+                <p><li>Habilidade e dedicação em adquirir novos conhecimentos;</li></p>
+                <p><li>Sigilo profissional;</li></p>
+                <p><li>Capacidade de trabalhar em equipa e promover dinâmica em grupo;</li></p>
+                <p><li>Dinamismo.</li></p>
+        </section>
+
+        <section id="Projetos Realizados" class="back">
+            <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem; color: #40e0d0;">Meus Projectos</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <img src="PROJECTO 1/Screenshot_20240903-072905.jpg" alt="Projeto 1">
+                    <p> </p>
+                </div>
+                <div class="card">
+                    <img src="PROJECTO 2/Screenshot_20240903-072905~2.jpg" alt="Projeto 2">
+                <p>Circuito Regulador de Tensão </p>
+                </div>
+                <div class="card">
+                    <img src="PROJECTO3/Screenshot_20240903-073400.jpg" alt="Projeto 3">
+                <p> </p>
+
+                </div>
+            </div>
+            <div class="projecto">
+            <p>
+                <h3>Projeto de Regulador de Tensão</h3>
+                No Instituto de Transporte e Comunicações,CV3 de eletricidade industrial tive a oportunidade de trabalhar em um projeto de regulador de tensão. <br>
+                Este projeto foi extremamente enriquecedor e proporcionou um aprendizado prático valioso. <br>
+                <p></p>
+                Tive a oportunidade de desenvolver um circuito capaz de manter uma tensão constante, independentemente das variações na carga ou na tensão de entrada. <br>
+                Utilizamos resistores, capacitores e outros componentes eletrônicos essenciais para montar o circuito no breadboard. <br>
+                Foi uma experiência incrível entender como os reguladores de tensão funcionam e a importância deles em diversos dispositivos eletrônicos. <br>
+                Este projeto me ajudou a consolidar conhecimentos teóricos e a aplicá-los em situações reais, preparando-me melhor para desafios futuros na área de eletrônica e como na imformatica. <br>
+                </p>
+            </div>
+        </section>
+          
+        <main>
+            <section id="Meus Serviços" class="Serviços">
+                <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem; color: #40e0d0;">Meus Servicos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="sv1/ff498649-e05c-4946-8668-a529ac6f0066.jpg" alt="Imagem do Card 1" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Logo da empresa</h2>
+                        <p class="card-text">Faço Montagem de som,Luz.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="sv2/b370b26b-40ea-4963-a42e-b7313a16ee2f.jpg" alt="Imagem do Card 2" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Eventos para shows</h2>
+                        <p class="card-text">Eventos para shows.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="sv3/25a7b290-3db8-4c64-8af1-5aa54e4b8b33.jpg" alt="Imagem do Card 3" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Eventos</h2>
+                        <p class="card-text">Todo tipo de Eventos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+
+
+
+        <section id="Contactos" style="background-color: #111; padding: 60px 0;">
+            <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem; color: #40e0d0;">Entre em Contacto</h2>
+            <div class="container" style="width: 50%; margin: auto;">
+                <form action="submit_form.php" method="post" style="background-color: #222; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">
+                    <div style="margin-bottom: 20px;">
+                        <label for="name" style="color: #ddd; display: block; margin-bottom: 5px;">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Teu nome" style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #333; color: white;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="email" style="color: #ddd; display: block; margin-bottom: 5px;">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Teu email" style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #333; color: white;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="message" style="color: #ddd; display: block; margin-bottom: 5px;">Mensagem</label>
+                        <textarea id="message" name="message" placeholder="Mensagem" style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #333; color: white; height: 150px;"></textarea>
+                    </div>
+                    <button type="submit" style="width: 100%; padding: 10px; background-color: #40e0d0; border: none; border-radius: 5px; color: rgb(12, 9, 9); cursor: pointer; transition: background 0.3s;">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Nivea Fernanda 2024.</p>
+    </footer>
+
+    
+</body>
+</html>
